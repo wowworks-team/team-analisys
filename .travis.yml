@@ -1,0 +1,17 @@
+services:
+  - postgresql
+addons:
+  postgresql: 9.6
+language: php
+php:
+  - '7.1'
+install:
+  - composer install --no-interaction
+before_script:
+  - psql -U postgres -c 'CREATE DATABASE team_analisys_test OWNER test;';
+  - ./yii_test migrate --interactive=0
+  - vendor/bin/codecept build
+script:
+  - vendor/bin/phpstan analyse -l 0 -c phpstan.neon console common
+  - vendor/bin/phpcs
+  - vendor/bin/codecept run -n

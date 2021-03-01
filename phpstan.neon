@@ -1,0 +1,13 @@
+parameters:
+    autoload_directories:
+        - %rootDir%/../../../console/migrations
+    autoload_files:
+        - %rootDir%/../../../vendor/autoload.php
+        - %rootDir%/../../../vendor/yiisoft/yii2/Yii.php
+        - %rootDir%/../../../common/config/bootstrap.php
+        - %rootDir%/../../../console/config/bootstrap.php
+        - %rootDir%/../../../vendor/codeception/base/autoload.php
+    excludes_analyse:
+        - %rootDir%/../../../*/tests/*
+        - */views/*
+        - *common/mail/*

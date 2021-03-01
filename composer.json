@@ -1,0 +1,50 @@
+{
+    "name": "wowworks/team-analisys",
+    "description": "BI tool for development tool",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "common\\": "common/",
+            "console\\": "console/"
+        }
+    },
+    "require": {
+        "php": ">=7.1",
+        "dmstr/yii2-adminlte-asset": "^2.1",
+        "gentle/bitbucket-api": "^1.1",
+        "guzzlehttp/guzzle": "^6.3",
+        "kartik-v/yii2-widget-datepicker": "@dev",
+        "kartik-v/yii2-widget-select2": "@dev",
+        "lesstif/php-jira-rest-client": "^1.35",
+        "yiisoft/yii2": "~2.0.6",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.0.0",
+        "yiisoft/yii2-gii": "~2.0.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+        "codeception/base": "^2.2.3",
+        "codeception/verify": "~0.3.1",
+        "phpstan/phpstan": "^0.11.1",
+        "squizlabs/php_codesniffer": "^3.4"
+    },
+    "config": {
+        "sort-packages": true,
+        "process-timeout": 1800,
+        "fxp-asset": {
+            "enabled": false
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "scripts": {
+        "post-install-cmd": "php init --env=Development --overwrite=n"
+    }
+}
