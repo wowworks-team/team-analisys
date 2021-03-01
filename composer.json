@@ -3,6 +3,12 @@
     "description": "BI tool for development tool",
     "type": "project",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Wowworks",
+            "email": "it@wowworks.ru"
+        }
+    ],
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
@@ -44,7 +50,4 @@
             "url": "https://asset-packagist.org"
         }
     ],
-    "scripts": {
-        "post-install-cmd": "php init --env=Development --overwrite=n"
-    }
 }
