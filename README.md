@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/wowworks-team/team-analisys.svg?branch=main)](https://travis-ci.org/wowworks-team/team-analisys)
+[![Build Status](https://travis-ci.org/wowworks-team/team-analysis.svg?branch=master)](https://travis-ci.org/wowworks-team/team-analysis)
 # Analysis
 
 
