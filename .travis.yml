@@ -8,7 +8,7 @@ php:
 install:
   - composer install --no-interaction
 before_script:
-  - psql -U postgres -c 'CREATE DATABASE team_analisys_test OWNER test;';
+  - psql -U postgres -c 'CREATE DATABASE team_analisys_test;';
   - ./yii_test migrate --interactive=0
   - vendor/bin/codecept build
 script:
