@@ -8,7 +8,7 @@ php:
 install:
   - composer install --no-interaction
 before_script:
-  - psql -U postgres -c 'CREATE USER test WITH ENCRYPTED PASSWORD 'test';';
+  - psql -U postgres -c "CREATE USER test WITH ENCRYPTED PASSWORD 'test';";
   - psql -U postgres -c 'CREATE DATABASE team_analisys_test OWNER test;';
   - php init --env=Development --overwrite=n
   - ./yii_test migrate --interactive=0
